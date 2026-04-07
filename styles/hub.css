@@ -1,77 +1,111 @@
 :root {
-  --black: #07090F;
-  --navy: #0D1117;
-  --surface: #161B27;
-  --card: #1C2535;
-  --border: #2A3145;
-  --accent: #58A6FF;
-  --accent-soft: rgba(88, 166, 255, 0.10);
-  --teal: #00D4AA;
-  --purple: #BC8CFF;
-  --orange: #FFA657;
-  --green: #3FB950;
-  --text: #E8EAF0;
-  --text-dim: #8B93A8;
-  --text-muted: #4A5268;
+  --black: #030508;
+  --navy: #0A0E17;
+  --surface: #111827;
+  --card: #151C2C;
+  --border: #1E2A3A;
+  --border-hover: #3B82F6;
+  --accent: #3B82F6;
+  --accent-glow: rgba(59, 130, 246, 0.15);
+  --teal: #10B981;
+  --purple: #8B5CF6;
+  --orange: #F59E0B;
+  --green: #22C55E;
+  --text: #F1F5F9;
+  --text-dim: #94A3B8;
+  --text-muted: #475569;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', sans-serif;
   background: var(--black);
   color: var(--text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Animated Background ── */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 50% at 10% 90%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* ── Hero ── */
 .hero {
-  text-align: center;
-  padding: 80px 24px 60px;
-  background: linear-gradient(180deg, var(--navy) 0%, var(--black) 100%);
   position: relative;
-  overflow: hidden;
+  text-align: center;
+  padding: 120px 24px 80px;
+  z-index: 1;
 }
-.hero::before {
+.hero::after {
   content: '';
   position: absolute;
-  top: -50%;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, var(--accent-soft) 0%, transparent 70%);
-  pointer-events: none;
+  width: 80%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+.hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 100px;
+  background: var(--accent-glow);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 .hero-title {
-  font-size: 48px;
+  font-size: 64px;
   font-weight: 800;
-  letter-spacing: 8px;
-  margin-bottom: 16px;
-  background: linear-gradient(135deg, var(--accent), var(--teal));
+  letter-spacing: 12px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #fff 0%, var(--accent) 50%, var(--teal) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.1;
 }
 .hero-subtitle {
-  font-size: 20px;
+  font-size: 22px;
   color: var(--text-dim);
-  line-height: 1.6;
-  margin-bottom: 8px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  font-weight: 400;
 }
 .hero-tagline {
   font-size: 14px;
   color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* ── App Grid ── */
 .app-grid {
-  max-width: 960px;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -80,11 +114,11 @@ body {
   display: block;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 20px;
+  padding: 28px;
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -93,114 +127,134 @@ body {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(90deg, var(--accent), var(--teal), var(--purple));
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.35s;
+}
+.app-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: radial-gradient(ellipse at 30% 0%, var(--accent-glow) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.35s;
+  pointer-events: none;
 }
 .app-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(88, 166, 255, 0.08);
+  border-color: var(--border-hover);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px var(--accent-glow);
 }
-.app-card:hover::before { opacity: 1; }
+.app-card:hover::before,
+.app-card:hover::after { opacity: 1; }
 
 .app-card-coming {
-  opacity: 0.6;
+  opacity: 0.45;
   cursor: default;
+  filter: grayscale(0.3);
 }
 .app-card-coming:hover {
   border-color: var(--border);
   transform: none;
   box-shadow: none;
+  filter: grayscale(0.3);
 }
-.app-card-coming::before { display: none; }
+.app-card-coming::before,
+.app-card-coming::after { display: none; }
 
 .app-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .app-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 30px;
   flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.06);
 }
-.icon-cypherchat { background: linear-gradient(135deg, #003D2E, #00D4AA33); }
-.icon-aether { background: linear-gradient(135deg, #0D1117, #58A6FF33); }
-.icon-apple { background: linear-gradient(135deg, #1C2535, #BC8CFF33); }
-.icon-android { background: linear-gradient(135deg, #00D4AA33, #3FB95033); }
+.icon-cypherchat { background: linear-gradient(135deg, #064E3B, rgba(16, 185, 129, 0.15)); }
+.icon-aether { background: linear-gradient(135deg, #1E1B4B, rgba(139, 92, 246, 0.15)); }
+.icon-apple { background: linear-gradient(135deg, #1C2535, rgba(139, 92, 246, 0.12)); }
+.icon-android { background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(34, 197, 94, 0.1)); }
 
-.app-badges { display: flex; flex-wrap: wrap; gap: 4px; justify-content: flex-end; }
+.app-badges { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
 .badge {
   font-size: 9px;
   font-weight: 600;
-  padding: 3px 8px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-.badge-pwa { background: rgba(88, 166, 255, 0.15); color: var(--accent); }
-.badge-ios { background: rgba(188, 140, 255, 0.15); color: var(--purple); }
-.badge-android { background: rgba(0, 212, 170, 0.15); color: var(--teal); }
-.badge-desktop { background: rgba(255, 166, 87, 0.15); color: var(--orange); }
+.badge-pwa { background: rgba(59, 130, 246, 0.15); color: var(--accent); }
+.badge-ios { background: rgba(139, 92, 246, 0.15); color: var(--purple); }
+.badge-android { background: rgba(16, 185, 129, 0.15); color: var(--teal); }
+.badge-desktop { background: rgba(245, 158, 11, 0.15); color: var(--orange); }
 
 .app-name {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
 }
 .app-desc {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text-dim);
-  line-height: 1.5;
-  margin-bottom: 16px;
-  min-height: 52px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  min-height: 44px;
 }
 .app-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .meta-item {
   font-size: 11px;
   color: var(--text-muted);
-  background: rgba(42, 49, 69, 0.5);
-  padding: 3px 8px;
-  border-radius: 4px;
+  background: rgba(30, 42, 58, 0.6);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.04);
 }
 .app-cta {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--accent);
   transition: transform 0.2s;
+  letter-spacing: 0.2px;
 }
-.app-card:hover .app-cta { transform: translateX(4px); }
+.app-card:hover .app-cta { transform: translateX(5px); }
 .app-cta-link {
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-muted);
   cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
 }
-.app-cta-link:hover { color: var(--text-dim); }
+.app-cta-link:hover { color: var(--text-dim); border-color: var(--text-muted); }
 
 /* ── Footer ── */
 .hub-footer {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  padding: 40px 24px 32px;
+  padding: 40px 24px 48px;
   border-top: 1px solid var(--border);
-  margin-top: 20px;
 }
 .hub-footer p {
   font-size: 13px;
@@ -209,23 +263,27 @@ body {
 }
 .hub-footer p strong { color: var(--text-dim); }
 .footer-links {
-  margin-top: 16px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
   font-size: 13px;
+  flex-wrap: wrap;
 }
 .footer-links a {
-  color: var(--accent);
+  color: var(--text-muted);
   text-decoration: none;
+  transition: color 0.2s;
 }
-.footer-links a:hover { text-decoration: underline; }
-.footer-links span { color: var(--text-muted); }
+.footer-links a:hover { color: var(--accent); }
+.footer-links span { color: var(--border); }
 
 /* ── Responsive ── */
-@media (max-width: 600px) {
-  .hero { padding: 60px 20px 40px; }
-  .hero-title { font-size: 32px; letter-spacing: 4px; }
-  .hero-subtitle { font-size: 16px; }
-  .app-grid { grid-template-columns: 1fr; padding: 24px 16px; }
+@media (max-width: 640px) {
+  .hero { padding: 80px 20px 60px; }
+  .hero-title { font-size: 36px; letter-spacing: 6px; }
+  .hero-subtitle { font-size: 18px; }
+  .hero-tagline { font-size: 13px; }
+  .app-grid { grid-template-columns: 1fr; padding: 40px 16px; gap: 16px; }
+  .app-card { padding: 24px; }
 }
