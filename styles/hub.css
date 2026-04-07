@@ -27,7 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Animated Background ── */
 body::before {
   content: '';
   position: fixed;
@@ -44,7 +43,7 @@ body::before {
 .hero {
   position: relative;
   text-align: center;
-  padding: 120px 24px 80px;
+  padding: 100px 24px 60px;
   z-index: 1;
 }
 .hero::after {
@@ -97,25 +96,65 @@ body::before {
   line-height: 1.6;
 }
 
-/* ── App Grid ── */
-.app-grid {
+/* ── Project Section ── */
+.project-section {
   position: relative;
   z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 60px 20px 20px;
+}
+.project-section + .project-section {
+  border-top: 1px solid var(--border);
+}
+.project-header {
+  display: flex;
+  align-items: center;
   gap: 20px;
+  margin-bottom: 32px;
+}
+.project-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.project-info { flex: 1; }
+.project-name {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.project-desc {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.5;
 }
 
-/* ── App Card ── */
-.app-card {
+/* ── Variant Grid ── */
+.variant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+.variant-grid-tools {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ── Variant Card ── */
+.variant-card {
   display: block;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 28px;
+  border-radius: 16px;
+  padding: 24px;
   text-decoration: none;
   color: inherit;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -123,7 +162,7 @@ body::before {
   overflow: hidden;
   cursor: pointer;
 }
-.app-card::before {
+.variant-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -132,121 +171,137 @@ body::before {
   opacity: 0;
   transition: opacity 0.35s;
 }
-.app-card::after {
+.variant-card::after {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 20px;
+  border-radius: 16px;
   background: radial-gradient(ellipse at 30% 0%, var(--accent-glow) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.35s;
   pointer-events: none;
 }
-.app-card:hover {
+.variant-card:hover {
   border-color: var(--border-hover);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px var(--accent-glow);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 32px var(--accent-glow);
 }
-.app-card:hover::before,
-.app-card:hover::after { opacity: 1; }
+.variant-card:hover::before,
+.variant-card:hover::after { opacity: 1; }
 
-.app-card-coming {
-  opacity: 0.45;
+.variant-card-coming {
+  opacity: 0.4;
   cursor: default;
-  filter: grayscale(0.3);
 }
-.app-card-coming:hover {
+.variant-card-coming:hover {
   border-color: var(--border);
   transform: none;
   box-shadow: none;
-  filter: grayscale(0.3);
 }
-.app-card-coming::before,
-.app-card-coming::after { display: none; }
+.variant-card-coming::before,
+.variant-card-coming::after { display: none; }
 
-.app-card-header {
+.variant-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 20px;
-}
-
-.app-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 16px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 12px;
 }
-.icon-cypherchat { background: linear-gradient(135deg, #064E3B, rgba(16, 185, 129, 0.15)); }
-.icon-aether { background: linear-gradient(135deg, #1E1B4B, rgba(139, 92, 246, 0.15)); }
-.icon-apple { background: linear-gradient(135deg, #1C2535, rgba(139, 92, 246, 0.12)); }
-.icon-android { background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(34, 197, 94, 0.1)); }
-
-.app-badges { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
-.badge {
-  font-size: 9px;
+.variant-os {
+  font-size: 12px;
   font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.badge-pwa { background: rgba(59, 130, 246, 0.15); color: var(--accent); }
-.badge-ios { background: rgba(139, 92, 246, 0.15); color: var(--purple); }
-.badge-android { background: rgba(16, 185, 129, 0.15); color: var(--teal); }
-.badge-desktop { background: rgba(245, 158, 11, 0.15); color: var(--orange); }
-
-.app-name {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: -0.3px;
-}
-.app-desc {
-  font-size: 14px;
   color: var(--text-dim);
-  line-height: 1.6;
-  margin-bottom: 18px;
-  min-height: 44px;
 }
-.app-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-.meta-item {
+.variant-version {
   font-size: 11px;
   color: var(--text-muted);
-  background: rgba(30, 42, 58, 0.6);
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.04);
+  font-family: monospace;
+  background: rgba(30, 42, 58, 0.5);
+  padding: 2px 8px;
+  border-radius: 4px;
 }
-.app-cta {
+.variant-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.variant-desc {
+  font-size: 13px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 14px;
+  min-height: 39px;
+}
+.variant-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.tag {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.tag-android { background: rgba(16, 185, 129, 0.15); color: var(--teal); }
+.tag-ios { background: rgba(139, 92, 246, 0.15); color: var(--purple); }
+.tag-desktop { background: rgba(245, 158, 11, 0.15); color: var(--orange); }
+.tag-pwa { background: rgba(59, 130, 246, 0.15); color: var(--accent); }
+.tag-feature { background: rgba(34, 197, 94, 0.12); color: var(--green); }
+
+.variant-cta {
   display: inline-block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--accent);
   transition: transform 0.2s;
-  letter-spacing: 0.2px;
 }
-.app-card:hover .app-cta { transform: translateX(5px); }
-.app-cta-link {
-  display: inline-block;
-  font-size: 13px;
+.variant-card:hover .variant-cta { transform: translateX(5px); }
+
+/* ── Compact Tool Cards ── */
+.variant-card-compact {
+  padding: 16px 20px !important;
+}
+.compact-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.compact-icon {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.compact-name {
+  font-size: 15px;
+  font-weight: 700;
+  flex: 1;
+}
+.compact-badge {
+  font-size: 9px;
+  font-weight: 600;
   color: var(--text-muted);
-  cursor: pointer;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.2s;
+  background: rgba(30, 42, 58, 0.5);
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
-.app-cta-link:hover { color: var(--text-dim); border-color: var(--text-muted); }
+.compact-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
 
 /* ── Footer ── */
 .hub-footer {
@@ -255,6 +310,7 @@ body::before {
   text-align: center;
   padding: 40px 24px 48px;
   border-top: 1px solid var(--border);
+  margin-top: 40px;
 }
 .hub-footer p {
   font-size: 13px;
@@ -280,10 +336,14 @@ body::before {
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .hero { padding: 80px 20px 60px; }
+  .hero { padding: 72px 20px 48px; }
   .hero-title { font-size: 36px; letter-spacing: 6px; }
   .hero-subtitle { font-size: 18px; }
   .hero-tagline { font-size: 13px; }
-  .app-grid { grid-template-columns: 1fr; padding: 40px 16px; gap: 16px; }
-  .app-card { padding: 24px; }
+  .project-section { padding: 40px 16px 16px; }
+  .project-header { flex-direction: column; text-align: center; gap: 12px; }
+  .project-name { font-size: 24px; }
+  .variant-grid { grid-template-columns: 1fr; gap: 12px; }
+  .variant-grid-tools { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .variant-card { padding: 20px; }
 }

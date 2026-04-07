@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07090F">
-  <title>Sideload — Private Apps, Zero Install Friction</title>
+  <meta name="theme-color" content="#030508">
+  <title>Sideload — Your Apps. Your Device. Your Rules.</title>
   <link rel="stylesheet" href="/styles/hub.css">
 </head>
 <body>
@@ -12,96 +12,287 @@
     <!-- Hero -->
     <header class="hero">
       <div class="hero-content">
-        <span class="hero-badge">⬡ Open Source · Zero Tracking</span>
+        <span class="hero-badge">⬡ Open Source · Zero Tracking · 100% Local</span>
         <h1 class="hero-title">SIDELOAD</h1>
         <p class="hero-subtitle">Your apps. Your device. Your rules.</p>
         <p class="hero-tagline">No app store. No accounts. No cloud. Tap once — installed on your home screen forever.</p>
       </div>
     </header>
 
-    <!-- App Grid -->
-    <main class="app-grid">
-
-      <!-- Cypherchat PWA -->
-      <a href="/cypherchat/" class="app-card">
-        <div class="app-card-header">
-          <div class="app-icon icon-cypherchat">🛡️</div>
-          <div class="app-badges">
-            <span class="badge badge-pwa">PWA</span>
-            <span class="badge badge-ios">iPhone</span>
-            <span class="badge badge-android">Android</span>
-            <span class="badge badge-desktop">Desktop</span>
-          </div>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION: AETHER — AI Workstation                -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="project-section">
+      <div class="project-header">
+        <div class="project-icon">🌌</div>
+        <div class="project-info">
+          <h2 class="project-name">Aether</h2>
+          <p class="project-desc">Fully offline AI workstation. Local-first neural interface that writes code, analyzes systems, and learns your workflows.</p>
         </div>
-        <h2 class="app-name">Cypherchat</h2>
-        <p class="app-desc">End-to-end encrypted messaging. Zero-knowledge, identity-free. Same crypto as Signal, no phone number needed.</p>
-        <div class="app-meta">
-          <span class="meta-item">🔐 AES-256-GCM</span>
-          <span class="meta-item">📱 Installable</span>
-          <span class="meta-item">📴 Offline</span>
-        </div>
-        <span class="app-cta">Open App →</span>
-      </a>
-
-      <!-- Aether Desktop (info card, not PWA) -->
-      <div class="app-card app-card-coming">
-        <div class="app-card-header">
-          <div class="app-icon icon-aether">🌌</div>
-          <div class="app-badges">
-            <span class="badge badge-desktop">macOS</span>
-            <span class="badge badge-desktop">Windows</span>
-            <span class="badge badge-desktop">Linux</span>
-          </div>
-        </div>
-        <h2 class="app-name">Aether Desktop</h2>
-        <p class="app-desc">Full local AI workstation with 4-tier model routing, toolbox, and Context7 memory. Tauri-based native app.</p>
-        <div class="app-meta">
-          <span class="meta-item">🤖 llama.cpp</span>
-          <span class="meta-item">🧰 Toolbox</span>
-          <span class="meta-item">🧠 Context7</span>
-        </div>
-        <span class="app-cta-link" onclick="window.open('https://github.com/earnerbaymalay/aether-desktop', '_blank')">View Source →</span>
       </div>
 
-      <!-- Aether Apple -->
-      <div class="app-card app-card-coming">
-        <div class="app-card-header">
-          <div class="app-icon icon-apple">🍎</div>
-          <div class="app-badges">
-            <span class="badge badge-ios">macOS</span>
-            <span class="badge badge-ios">iPad</span>
+      <div class="variant-grid">
+        <!-- AETHER: Android Flagship -->
+        <a href="https://github.com/earnerbaymalay/aether" class="variant-card variant-card-live" target="_blank">
+          <div class="variant-header">
+            <span class="variant-os">📱 Android</span>
+            <span class="variant-version">v18.0</span>
           </div>
+          <h3 class="variant-name">Flagship</h3>
+          <p class="variant-desc">4 AI tiers, swarm orchestration, skill marketplace, 10+ toolbox tools, Context7 memory, hardware benchmark.</p>
+          <div class="variant-meta">
+            <span class="tag tag-android">Termux</span>
+            <span class="tag tag-feature">4 Models</span>
+            <span class="tag tag-feature">Swarm</span>
+            <span class="tag tag-feature">10+ Tools</span>
+          </div>
+          <span class="variant-cta">View on GitHub →</span>
+        </a>
+
+        <!-- AETHER: macOS Full -->
+        <a href="https://github.com/earnerbaymalay/aether-apple" class="variant-card variant-card-live" target="_blank">
+          <div class="variant-header">
+            <span class="variant-os">🖥️ macOS</span>
+            <span class="variant-version">v2.0</span>
+          </div>
+          <h3 class="variant-name">Full</h3>
+          <p class="variant-desc">Native AI via Homebrew. llama.cpp at full speed. 2 modes, 6 toolbox tools, Context7 vault.</p>
+          <div class="variant-meta">
+            <span class="tag tag-ios">Apple Silicon</span>
+            <span class="tag tag-feature">2 Modes</span>
+            <span class="tag tag-feature">6 Tools</span>
+          </div>
+          <span class="variant-cta">View on GitHub →</span>
+        </a>
+
+        <!-- AETHER: iPad iSH -->
+        <a href="https://github.com/earnerbaymalay/aether-apple" class="variant-card variant-card-live" target="_blank">
+          <div class="variant-header">
+            <span class="variant-os">📱 iPad</span>
+            <span class="variant-version">v2.0</span>
+          </div>
+          <h3 class="variant-name">iSH (Medium)</h3>
+          <p class="variant-desc">Runs via iSH from App Store. Builds llama.cpp from source. Slower but fully functional.</p>
+          <div class="variant-meta">
+            <span class="tag tag-ios">Free App</span>
+            <span class="tag tag-feature">2 Modes</span>
+            <span class="tag tag-feature">5 Tools</span>
+          </div>
+          <span class="variant-cta">View on GitHub →</span>
+        </a>
+
+        <!-- AETHER: iPad a-Shell -->
+        <a href="https://github.com/earnerbaymalay/aether-apple" class="variant-card variant-card-live" target="_blank">
+          <div class="variant-header">
+            <span class="variant-os">📱 iPad</span>
+            <span class="variant-version">v2.0</span>
+          </div>
+          <h3 class="variant-name">a-Shell (Lite)</h3>
+          <p class="variant-desc">Quickest setup. Python-based inference. 5-minute install, sandboxed tools.</p>
+          <div class="variant-meta">
+            <span class="tag tag-ios">Free App</span>
+            <span class="tag tag-feature">2 Modes</span>
+            <span class="tag tag-feature">5 Tools</span>
+          </div>
+          <span class="variant-cta">View on GitHub →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION: CYPHERCHAT — Encrypted Messaging       -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="project-section">
+      <div class="project-header">
+        <div class="project-icon">🛡️</div>
+        <div class="project-info">
+          <h2 class="project-name">Cypherchat</h2>
+          <p class="project-desc">End-to-end encrypted messaging. Zero-knowledge, identity-free. Same crypto as Signal — no phone number needed.</p>
         </div>
-        <h2 class="app-name">Aether Apple</h2>
-        <p class="app-desc">AI on Mac and iPad. Runs via iSH or a-Shell. Same local-first philosophy, adapted for the Apple ecosystem.</p>
-        <div class="app-meta">
-          <span class="meta-item">⚡ llama.cpp</span>
-          <span class="meta-item">📱 Multi-platform</span>
-          <span class="meta-item">📴 Offline</span>
-        </div>
-        <span class="app-cta-link" onclick="window.open('https://github.com/earnerbaymalay/aether-apple', '_blank')">View Source →</span>
       </div>
 
-      <!-- Aether Android (flagship) -->
-      <div class="app-card app-card-coming">
-        <div class="app-card-header">
-          <div class="app-icon icon-android">📱</div>
-          <div class="app-badges">
-            <span class="badge badge-android">Android</span>
-            <span class="badge badge-pwa">Termux</span>
+      <div class="variant-grid">
+        <!-- CYPHERCHAT: Android Native -->
+        <a href="https://github.com/earnerbaymalay/e2eecc" class="variant-card variant-card-live" target="_blank">
+          <div class="variant-header">
+            <span class="variant-os">📱 Android</span>
+            <span class="variant-version">v1.0-alpha</span>
           </div>
+          <h3 class="variant-name">Native App</h3>
+          <p class="variant-desc">Kotlin + Jetpack Compose. Double Ratchet + SimpleX. SQLCipher at-rest encryption. SHA-256 PIN lock.</p>
+          <div class="variant-meta">
+            <span class="tag tag-android">APK</span>
+            <span class="tag tag-feature">AES-256-GCM</span>
+            <span class="tag tag-feature">SimpleX</span>
+          </div>
+          <span class="variant-cta">View on GitHub →</span>
+        </a>
+
+        <!-- CYPHERCHAT: iPhone PWA -->
+        <a href="/cypherchat/" class="variant-card variant-card-live">
+          <div class="variant-header">
+            <span class="variant-os">🍎 iPhone</span>
+            <span class="variant-version">v1.0</span>
+          </div>
+          <h3 class="variant-name">PWA</h3>
+          <p class="variant-desc">Install from Safari — no App Store needed. WebCrypto AES-256-GCM, ECDH, HKDF. Works offline.</p>
+          <div class="variant-meta">
+            <span class="tag tag-pwa">PWA</span>
+            <span class="tag tag-feature">WebCrypto</span>
+            <span class="tag tag-feature">Offline</span>
+          </div>
+          <span class="variant-cta">Open App →</span>
+        </a>
+
+        <!-- CYPHERCHAT: Desktop -->
+        <div class="variant-card variant-card-coming">
+          <div class="variant-header">
+            <span class="variant-os">🖥️ Desktop</span>
+            <span class="variant-version">Planned</span>
+          </div>
+          <h3 class="variant-name">Tauri App</h3>
+          <p class="variant-desc">Cross-platform desktop client. Same crypto, native file system access. Coming soon.</p>
+          <div class="variant-meta">
+            <span class="tag tag-desktop">macOS</span>
+            <span class="tag tag-desktop">Windows</span>
+            <span class="tag tag-desktop">Linux</span>
+          </div>
+          <span class="variant-cta">In Development</span>
         </div>
-        <h2 class="app-name">Aether Android</h2>
-        <p class="app-desc">The flagship. 4 AI tiers, swarm orchestration, skill marketplace, 10+ toolbox tools. The full neural experience.</p>
-        <div class="app-meta">
-          <span class="meta-item">🤖 4 Tiers</span>
-          <span class="meta-item">🛠️ 10+ Tools</span>
-          <span class="meta-item">🧬 Swarm</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION: GLOAM — Solar Journaling               -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="project-section">
+      <div class="project-header">
+        <div class="project-icon">🌗</div>
+        <div class="project-info">
+          <h2 class="project-name">Gloam</h2>
+          <p class="project-desc">Solar-timed journaling with CBT prompts and mood tracking. Theme transitions sync with your local sunrise and sunset.</p>
         </div>
-        <span class="app-cta-link" onclick="window.open('https://github.com/earnerbaymalay/aether', '_blank')">View Source →</span>
       </div>
 
-    </main>
+      <div class="variant-grid">
+        <!-- GLOAM: Android -->
+        <a href="https://github.com/earnerbaymalay/Gloam" class="variant-card variant-card-live" target="_blank">
+          <div class="variant-header">
+            <span class="variant-os">📱 Android</span>
+            <span class="variant-version">v2.0</span>
+          </div>
+          <h3 class="variant-name">Native App</h3>
+          <p class="variant-desc">Compose Multiplatform — Android + Desktop. SQLCipher DB, NOAA sun calculator, PIN lock, JSON export.</p>
+          <div class="variant-meta">
+            <span class="tag tag-android">APK</span>
+            <span class="tag tag-feature">CBT Prompts</span>
+            <span class="tag tag-feature">Mood Map</span>
+          </div>
+          <span class="variant-cta">View on GitHub →</span>
+        </a>
+
+        <!-- GLOAM: Desktop -->
+        <a href="https://github.com/earnerbaymalay/Gloam" class="variant-card variant-card-live" target="_blank">
+          <div class="variant-header">
+            <span class="variant-os">🖥️ Desktop</span>
+            <span class="variant-version">v2.0</span>
+          </div>
+          <h3 class="variant-name">Compose Desktop</h3>
+          <p class="variant-desc">Same codebase, native desktop app. macOS (DMG), Windows (MSI), Linux (deb/AppImage).</p>
+          <div class="variant-meta">
+            <span class="tag tag-desktop">macOS</span>
+            <span class="tag tag-desktop">Windows</span>
+            <span class="tag tag-desktop">Linux</span>
+          </div>
+          <span class="variant-cta">View on GitHub →</span>
+        </a>
+
+        <!-- GLOAM: PWA -->
+        <div class="variant-card variant-card-coming">
+          <div class="variant-header">
+            <span class="variant-os">🌐 Any Browser</span>
+            <span class="variant-version">Planned</span>
+          </div>
+          <h3 class="variant-name">PWA</h3>
+          <p class="variant-desc">Installable from any browser. IndexedDB storage. Same CBT prompts, same mood tracking, zero install friction.</p>
+          <div class="variant-meta">
+            <span class="tag tag-pwa">PWA</span>
+            <span class="tag tag-pwa">iPhone</span>
+            <span class="tag tag-pwa">Android</span>
+          </div>
+          <span class="variant-cta">In Development</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SECTION: TOOLS & UTILITIES                      -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="project-section">
+      <div class="project-header">
+        <div class="project-icon">🧰</div>
+        <div class="project-info">
+          <h2 class="project-name">Tools &amp; Utilities</h2>
+          <p class="project-desc">Standalone tools that complement the ecosystem. Dev utilities, system optimizers, and security scripts.</p>
+        </div>
+      </div>
+
+      <div class="variant-grid variant-grid-tools">
+        <a href="https://github.com/earnerbaymalay/Termux-Vault" class="variant-card variant-card-compact" target="_blank">
+          <div class="compact-header">
+            <span class="compact-icon">🔐</span>
+            <span class="compact-name">Termux-Vault</span>
+            <span class="compact-badge">Android</span>
+          </div>
+          <p class="compact-desc">Automated AI dev configs for Termux — Ollama, Python, SSH, dotfiles, backups.</p>
+        </a>
+
+        <a href="https://github.com/earnerbaymalay/multi-ai-terminal-setup" class="variant-card variant-card-compact" target="_blank">
+          <div class="compact-header">
+            <span class="compact-icon">💻</span>
+            <span class="compact-name">Multi-AI Terminal</span>
+            <span class="compact-badge">Windows</span>
+          </div>
+          <p class="compact-desc">Windows Terminal config for Claude, Kimi, Gemini, Qwen, Codex, Kilo Code, Ollama.</p>
+        </a>
+
+        <a href="https://github.com/earnerbaymalay/nexus11-optimizer.py" class="variant-card variant-card-compact" target="_blank">
+          <div class="compact-header">
+            <span class="compact-icon">⚡</span>
+            <span class="compact-name">Nexus Optimizer</span>
+            <span class="compact-badge">Windows 10/11</span>
+          </div>
+          <p class="compact-desc">Modular Windows optimization — registry tweaks, debloat, privacy hardening, gaming perf.</p>
+        </a>
+
+        <a href="https://github.com/earnerbaymalay/ai-hub-widget" class="variant-card variant-card-compact" target="_blank">
+          <div class="compact-header">
+            <span class="compact-icon">🤖</span>
+            <span class="compact-name">AI Hub Widget</span>
+            <span class="compact-badge">Windows Desktop</span>
+          </div>
+          <p class="compact-desc">Desktop widget for 7 AI CLI tools with system monitoring, prompt templates, command center.</p>
+        </a>
+
+        <a href="https://github.com/earnerbaymalay/edge-sentinel" class="variant-card variant-card-compact" target="_blank">
+          <div class="compact-header">
+            <span class="compact-icon">🛡️</span>
+            <span class="compact-name">Edge Sentinel</span>
+            <span class="compact-badge">Hybrid</span>
+          </div>
+          <p class="compact-desc">Cyber-security telemetry + AI dashboard. React frontend, FastAPI backend, Gemini analysis.</p>
+        </a>
+
+        <a href="https://github.com/earnerbaymalay/cascad-mobile" class="variant-card variant-card-compact" target="_blank">
+          <div class="compact-header">
+            <span class="compact-icon">🧬</span>
+            <span class="compact-name">CasCad Mobile</span>
+            <span class="compact-badge">PWA</span>
+          </div>
+          <p class="compact-desc">Parallel AI processing — Logic, Art, Review rays fused into one response. 3 rays + 1 fusion call.</p>
+        </a>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="hub-footer">
@@ -109,11 +300,11 @@
       <p>No cloud servers. No user tracking. No subscriptions. Ever.</p>
       <div class="footer-links">
         <a href="https://github.com/earnerbaymalay" target="_blank">GitHub Profile</a>
-        <span>•</span>
+        <span>·</span>
         <a href="https://github.com/earnerbaymalay/aether" target="_blank">Aether</a>
-        <span>•</span>
+        <span>·</span>
         <a href="https://github.com/earnerbaymalay/e2eecc" target="_blank">Cypherchat</a>
-        <span>•</span>
+        <span>·</span>
         <a href="https://github.com/earnerbaymalay/Gloam" target="_blank">Gloam</a>
       </div>
     </footer>
