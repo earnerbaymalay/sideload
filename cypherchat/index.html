@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cypherchat">
+  <meta name="theme-color" content="#07090F">
+  <meta name="description" content="End-to-end encrypted messaging — zero-knowledge, identity-free">
+  <title>Cypherchat</title>
+  <link rel="manifest" href="/cypherchat/manifest.json">
+  <link rel="apple-touch-icon" href="/cypherchat/icons/icon-192.png">
+  <link rel="icon" href="/cypherchat/icons/icon-192.png" type="image/png">
+  <link rel="stylesheet" href="/cypherchat/styles/app.css">
+</head>
+<body>
+  <div id="app">
+    <!-- PIN Lock Screen -->
+    <div id="pin-screen" class="screen active">
+      <div class="pin-container">
+        <div class="pin-icon">🛡️</div>
+        <h1 class="pin-title">Cypherchat</h1>
+        <p class="pin-subtitle" id="pin-subtitle">Set a 4-digit PIN</p>
+        <div class="pin-dots" id="pin-dots">
+          <span class="pin-dot"></span><span class="pin-dot"></span>
+          <span class="pin-dot"></span><span class="pin-dot"></span>
+        </div>
+        <p class="pin-error" id="pin-error"></p>
+        <div class="pin-keypad" id="pin-keypad">
+          <button class="pin-key" data-key="1">1</button>
+          <button class="pin-key" data-key="2">2</button>
+          <button class="pin-key" data-key="3">3</button>
+          <button class="pin-key" data-key="4">4</button>
+          <button class="pin-key" data-key="5">5</button>
+          <button class="pin-key" data-key="6">6</button>
+          <button class="pin-key" data-key="7">7</button>
+          <button class="pin-key" data-key="8">8</button>
+          <button class="pin-key" data-key="9">9</button>
+          <button class="pin-key pin-key-empty"></button>
+          <button class="pin-key" data-key="0">0</button>
+          <button class="pin-key pin-key-back" data-key="⌫">⌫</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conversation List -->
+    <div id="list-screen" class="screen">
+      <header class="list-header">
+        <div class="list-header-left">
+          <span class="shield-icon">🛡️</span><h1>Cypherchat</h1>
+        </div>
+        <button class="btn-new-chat" id="btn-new-chat" title="New conversation">+</button>
+      </header>
+      <div class="list-empty" id="list-empty">
+        <span class="empty-icon">🔒</span>
+        <h2>No conversations yet</h2>
+        <p>Tap + to create an invitation link<br>and share it securely with a contact</p>
+      </div>
+      <div class="list-content" id="list-content"></div>
+    </div>
+
+    <!-- Conversation Screen -->
+    <div id="chat-screen" class="screen">
+      <header class="chat-header">
+        <button class="btn-back" id="btn-back">←</button>
+        <div class="chat-header-info">
+          <h2 id="chat-contact-name">Unknown</h2>
+          <span class="encrypted-badge" id="encrypted-badge">
+            <span class="lock-icon">🔒</span><span>End-to-end encrypted</span>
+          </span>
+        </div>
+      </header>
+      <div class="encryption-notice" id="encryption-notice">
+        <span>🔒</span>
+        <span>Messages are end-to-end encrypted and cannot be read by anyone else</span>
+      </div>
+      <div class="messages" id="messages"></div>
+      <div class="compose-bar">
+        <textarea id="message-input" placeholder="Message" rows="1"></textarea>
+        <button class="btn-send" id="btn-send">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Settings Screen -->
+    <div id="settings-screen" class="screen">
+      <header class="settings-header">
+        <button class="btn-back" id="btn-settings-back">←</button>
+        <h1>Settings</h1><div></div>
+      </header>
+      <div class="settings-content">
+        <div class="settings-section">
+          <h3>Security</h3>
+          <button class="settings-item" id="btn-export"><span>📤 Export Messages (JSON)</span><span>›</span></button>
+          <button class="settings-item" id="btn-clear"><span>🗑️ Clear All Data</span><span>›</span></button>
+        </div>
+        <div class="settings-section">
+          <h3>About</h3>
+          <div class="settings-item static"><span>Version</span><span>1.0.0 PWA</span></div>
+          <div class="settings-item static"><span>Encryption</span><span>AES-256-GCM + Double Ratchet</span></div>
+          <div class="settings-item static"><span>Key Storage</span><span>WebCrypto + IndexedDB</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App scripts -->
+  <script type="module" src="/cypherchat/crypto/CryptoEngine.js"></script>
+  <script type="module" src="/cypherchat/db/MessageStore.js"></script>
+  <script type="module" src="/cypherchat/main.js"></script>
+</body>
+</html>
