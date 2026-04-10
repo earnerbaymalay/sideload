@@ -36,7 +36,7 @@
 
 | Variant | Platform | Version | Status | Link |
 |---|---|---|---|---|
-| Native | 📱 Android | v1.0-alpha | ✅ Live | [Source →](https://github.com/earnerbaymalay/e2eecc) |
+| Native | 📱 Android | v1.0-alpha | ✅ Live | [Source →](https://github.com/earnerbaymalay/cyph3rchat) |
 | PWA | 🍎 iPhone / Any Browser | v1.0 | ✅ Live | **[Open App →](/cypherchat/)** |
 | Desktop | 🖥️ macOS / Windows / Linux | Planned | 🔮 Planned | — |
 
