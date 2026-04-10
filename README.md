@@ -53,6 +53,7 @@
 | Tool | Platform | Status | Link |
 |---|---|---|---|
 | 🔐 Termux-Vault | 📱 Android | ✅ Live | [Source →](https://github.com/earnerbaymalay/Termux-Vault) |
+| 🔗 MeshRelay | 🌐 Web / Rust | ✅ Live | **[Open Reader →](/meshtouch/)** |
 | 💻 Multi-AI Terminal | 🖥️ Windows | ✅ Live | [Source →](https://github.com/earnerbaymalay/multi-ai-terminal-setup) |
 | ⚡ Nexus Optimizer | 🖥️ Windows 10/11 | ✅ Live | [Source →](https://github.com/earnerbaymalay/nexus11-optimizer.py) |
 | 🤖 AI Hub Widget | 🖥️ Windows Desktop | ✅ Live | [Source →](https://github.com/earnerbaymalay/ai-hub-widget) |
