@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="360" viewBox="0 0 800 360">
+  <style>
+    .bg { fill: #0d1117; }
+    .card { fill: #161b22; rx: 6; }
+    .card-border { stroke: #30363d; stroke-width: 1; fill: none; rx: 6; }
+    .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; }
+    .text { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 11px; }
+    .small { font-size: 10px; }
+    .white { fill: #e6edf3; }
+    .dim { fill: #8b949e; }
+    .green { fill: #3fb950; }
+    .blue { fill: #58a6ff; }
+    .orange { fill: #f0883e; }
+    .purple { fill: #bc8cff; }
+    .pink { fill: #f778ba; }
+  </style>
+
+  <rect width="800" height="360" class="bg"/>
+  <text x="400" y="36" class="title white" text-anchor="middle">The Sideload Ecosystem</text>
+  <text x="400" y="54" class="text dim" text-anchor="middle">Every app runs entirely on your device — no cloud, no accounts, no tracking</text>
+
+  <!-- Sideload Hub center -->
+  <rect x="320" y="80" width="160" height="80" class="card" stroke="#58a6ff" stroke-width="2"/>
+  <text x="400" y="108" class="title blue" text-anchor="middle">📲 Sideload</text>
+  <text x="400" y="128" class="text dim" text-anchor="middle">Central Hub</text>
+  <text x="400" y="148" class="small dim" text-anchor="middle">earnerbaymalay.github.io/sideload</text>
+
+  <!-- Arrows outward -->
+  <line x1="320" y1="120" x2="180" y2="120" stroke="#30363d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="480" y1="120" x2="620" y2="120" stroke="#30363d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="160" x2="400" y2="220" stroke="#30363d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Aether (left) -->
+  <rect x="20" y="90" width="160" height="80" class="card" stroke="#3fb950" stroke-width="1"/>
+  <text x="100" y="114" class="title green" text-anchor="middle">🌌 Aether</text>
+  <text x="100" y="134" class="text dim" text-anchor="middle">AI Workstation</text>
+  <text x="100" y="154" class="small dim" text-anchor="middle">Termux · llama.cpp · 4 tiers</text>
+
+  <!-- Cyph3rChat (right) -->
+  <rect x="620" y="90" width="160" height="80" class="card" stroke="#f0883e" stroke-width="1"/>
+  <text x="700" y="114" class="title orange" text-anchor="middle">🛡️ Cyph3rChat</text>
+  <text x="700" y="134" class="text dim" text-anchor="middle">E2E Messaging</text>
+  <text x="700" y="154" class="small dim" text-anchor="middle">Double Ratchet · SQLCipher</text>
+
+  <!-- Gloam (below) -->
+  <rect x="320" y="220" width="160" height="80" class="card" stroke="#bc8cff" stroke-width="1"/>
+  <text x="400" y="244" class="title purple" text-anchor="middle">🌗 Gloam</text>
+  <text x="400" y="264" class="text dim" text-anchor="middle">Solar Journaling</text>
+  <text x="400" y="284" class="small dim" text-anchor="middle">NOAA · CBT · Mood Tracking</text>
+
+  <!-- Cross-links -->
+  <path d="M 180 150 Q 100 200 200 260" stroke="#21262d" stroke-width="1" stroke-dasharray="4" marker-end="url(#arrow-small)"/>
+  <path d="M 620 150 Q 700 200 600 260" stroke="#21262d" stroke-width="1" stroke-dasharray="4" marker-end="url(#arrow-small)"/>
+
+  <!-- Tooling row -->
+  <rect x="20" y="310" width="760" height="36" class="card"/>
+  <text x="100" y="332" class="text dim" text-anchor="middle">🧰 Termux-Vault</text>
+  <text x="280" y="332" class="text dim" text-anchor="middle">🔧 Edge Sentinel</text>
+  <text x="460" y="332" class="text dim" text-anchor="middle">🧬 CasCad Mobile</text>
+  <text x="660" y="332" class="text dim" text-anchor="middle">💻 Multi-AI Terminal</text>
+
+  <!-- Lines from apps to tooling -->
+  <line x1="100" y1="280" x2="100" y2="310" stroke="#21262d" stroke-width="1" stroke-dasharray="3"/>
+  <line x1="400" y1="280" x2="400" y2="310" stroke="#21262d" stroke-width="1" stroke-dasharray="3"/>
+  <line x1="700" y1="280" x2="700" y2="310" stroke="#21262d" stroke-width="1" stroke-dasharray="3"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#30363d"/>
+    </marker>
+    <marker id="arrow-small" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <polygon points="0 0, 6 2.5, 0 5" fill="#21262d"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="356" class="text small dim" text-anchor="middle">Solid lines = distribution  ·  Dashed lines = cross-references  ·  All MIT licensed  ·  100% local-first</text>
+</svg>

@@ -15,6 +15,8 @@
 
 ### What is this?
 
+![Ecosystem](assets/ecosystem.svg)
+
 **Sideload** is a central distribution point for local-first, privacy-respecting apps. Every app runs entirely on your device — no cloud, no accounts, no tracking, no app store gatekeepers.
 
 > **Open in any browser. Tap "Add to Home Screen." Installed.**
@@ -112,7 +114,7 @@ Deploy to **any static host** — this is just HTML/CSS/JS:
 In each project's README, add a link to the hub:
 
 ```markdown
-📲 **[Install on any device](https://earnerbaymalay.github.io/sideload/)
+📲 **[Install on any device](https://earnerbaymalay.github.io/sideload/)**
 ```
 
 Or link directly to a specific PWA:
@@ -120,6 +122,8 @@ Or link directly to a specific PWA:
 ```markdown
 📲 **[Install on iPhone](https://earnerbaymalay.github.io/sideload/cypherchat/)
 ```
+
+---
 
 ## 📜 License
 
@@ -130,5 +134,7 @@ Or link directly to a specific PWA:
 <div align="center">
 
 *Free. Private. Offline. No exceptions.*
+
+**[🌌 Aether](https://github.com/earnerbaymalay/aether)** · **[🛡️ Cyph3rChat](https://github.com/earnerbaymalay/cyph3rchat)** · **[🌗 Gloam](https://github.com/earnerbaymalay/Gloam)** · **[🧰 Termux-Vault](https://github.com/earnerbaymalay/Termux-Vault)**
 
 </div>
