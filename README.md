@@ -38,7 +38,7 @@
 
 | Variant | Platform | Version | Status | Link |
 |---|---|---|---|---|
-| Native | 📱 Android | v1.0-alpha | ✅ Live | [Source →](https://github.com/earnerbaymalay/e2eecc) |
+| Native | 📱 Android | v1.0-alpha | ✅ Live | [Source →](https://github.com/earnerbaymalay/cyph3rchat) |
 | PWA | 🍎 iPhone / Any Browser | v1.0 | ✅ Live | **[Open App →](/cypherchat/)** |
 | Desktop | 🖥️ macOS / Windows / Linux | Planned | 🔮 Planned | — |
 
@@ -135,6 +135,6 @@ Or link directly to a specific PWA:
 
 *Free. Private. Offline. No exceptions.*
 
-**[🌌 Aether](https://github.com/earnerbaymalay/aether)** · **[🛡️ Cyph3rChat](https://github.com/earnerbaymalay/e2eecc)** · **[🌗 Gloam](https://github.com/earnerbaymalay/Gloam)** · **[🧰 Termux-Vault](https://github.com/earnerbaymalay/Termux-Vault)**
+**[🌌 Aether](https://github.com/earnerbaymalay/aether)** · **[🛡️ Cyph3rChat](https://github.com/earnerbaymalay/cyph3rchat)** · **[🌗 Gloam](https://github.com/earnerbaymalay/Gloam)** · **[🧰 Termux-Vault](https://github.com/earnerbaymalay/Termux-Vault)**
 
 </div>
