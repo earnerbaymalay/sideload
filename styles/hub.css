@@ -1,8 +1,8 @@
 :root {
-  --bg: #060a10;
-  --card: #0c1220;
+  --bg: #050505;
+  --card: rgba(255, 255, 255, 0.03);
   --card-hover: #0f1729;
-  --border: #151e2e;
+  --border: rgba(255, 255, 255, 0.08);
   --hover-border: #1e2d45;
   --text: #e2e8f0;
   --text-dim: #64748b;
@@ -30,7 +30,7 @@
 
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.55;
@@ -125,6 +125,7 @@ body {
 .panel.active { display: block; }
 
 .app-card {
+  backdrop-filter: blur(20px) saturate(180%);
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -233,6 +234,7 @@ body {
   .tab-btn .tab-icon { font-size: 14px; }
   .tool-row { grid-template-columns: 1fr; }
   .app-card { padding: 18px; }
+  backdrop-filter: blur(20px) saturate(180%);
   .app-actions { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
 }
