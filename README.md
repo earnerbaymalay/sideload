@@ -42,25 +42,12 @@
 | PWA | 🍎 iPhone / Any Browser | v1.0 | ✅ Live | **[Open App →](/cypherchat/)** |
 | Desktop | 🖥️ macOS / Windows / Linux | Planned | 🔮 Planned | — |
 
-### 🌗 Gloam — Solar Journaling
-
-| Variant | Platform | Version | Status | Link |
-|---|---|---|---|---|
-| Native | 📱 Android | v2.0 | ✅ Live | [Source →](https://github.com/earnerbaymalay/Gloam) |
-| Desktop | 🖥️ macOS / Windows / Linux | v2.0 | ✅ Live | [Source →](https://github.com/earnerbaymalay/Gloam) |
-| PWA | 🌐 Any Browser | Planned | 🔮 Planned | — |
-
 ### 🧰 Tools & Utilities
 
 | Tool | Platform | Status | Link |
 |---|---|---|---|
-| 🔐 Termux-Vault | 📱 Android | ✅ Live | [Source →](https://github.com/earnerbaymalay/Termux-Vault) |
 | 🔗 MeshRelay | 🌐 Web / Rust | ✅ Live | **[Open Reader →](/meshtouch/)** |
-| 💻 Multi-AI Terminal | 🖥️ Windows | ✅ Live | [Source →](https://github.com/earnerbaymalay/multi-ai-terminal-setup) |
 | ⚡ Nexus Optimizer | 🖥️ Windows 10/11 | ✅ Live | [Source →](https://github.com/earnerbaymalay/nexus11-optimizer.py) |
-| 🤖 AI Hub Widget | 🖥️ Windows Desktop | ✅ Live | [Source →](https://github.com/earnerbaymalay/ai-hub-widget) |
-| 🛡️ Edge Sentinel | 🖥️ Hybrid | ✅ Live | [Source →](https://github.com/earnerbaymalay/edge-sentinel) |
-| 🧬 CasCad Mobile | 🌐 PWA | ✅ Live | [Source →](https://github.com/earnerbaymalay/cascad-mobile) |
 
 ---
 
@@ -135,6 +122,6 @@ Or link directly to a specific PWA:
 
 *Free. Private. Offline. No exceptions.*
 
-**[🌌 Aether](https://github.com/earnerbaymalay/aether)** · **[🛡️ Cyph3rChat](https://github.com/earnerbaymalay/cyph3rchat)** · **[🌗 Gloam](https://github.com/earnerbaymalay/Gloam)** · **[🧰 Termux-Vault](https://github.com/earnerbaymalay/Termux-Vault)**
+**[🌌 Aether](https://github.com/earnerbaymalay/aether)** · **[🛡️ Cyph3rChat](https://github.com/earnerbaymalay/cyph3rchat)** · **[🔗 MeshRelay](https://github.com/earnerbaymalay/meshtouch)**
 
 </div>
