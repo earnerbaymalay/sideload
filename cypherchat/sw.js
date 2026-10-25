@@ -1,12 +1,12 @@
-const CACHE_NAME = 'cypherchat-v1';
+const CACHE_NAME = 'cypherchat-v2';
 const ASSETS = [
-  '/cypherchat/',
-  '/cypherchat/index.html',
-  '/cypherchat/styles/app.css',
-  '/cypherchat/main.js',
-  '/cypherchat/crypto/CryptoEngine.js',
-  '/cypherchat/db/MessageStore.js',
-  '/cypherchat/manifest.json',
+  './',
+  './index.html',
+  './styles/app.css',
+  './main.js',
+  './crypto/CryptoEngine.js',
+  './db/MessageStore.js',
+  './manifest.json',
 ];
 
 self.addEventListener('install', (event) => {
@@ -34,6 +34,6 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       });
-    }).catch(() => caches.match('/cypherchat/index.html'))
+    }).catch(() => caches.match('./index.html'))
   );
 });
